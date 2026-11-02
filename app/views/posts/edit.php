@@ -1,0 +1,3 @@
+<?php $title = 'Edit Post'; require __DIR__ . '/../partials/header.php'; ?>
+<main class="container narrow"><section class="card"><p class="eyebrow">POST MANAGEMENT</p><h1>Edit Post</h1><form method="post" action="index.php?page=post_edit&id=<?= (int)$post['id'] ?>"><input type="hidden" name="_csrf" value="<?= e(csrf_token()) ?>"><label>Content<textarea name="content" rows="7" maxlength="2000" required><?= e($post['content']) ?></textarea></label><button class="primary" type="submit">Save Changes</button> <a class="button secondary" href="index.php?page=feed">Cancel</a></form></section></main>
+<?php require __DIR__ . '/../partials/footer.php'; ?>
